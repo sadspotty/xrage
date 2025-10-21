@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>XRAGE MTA — Официальный сайт</title>
+  <title>XRAGE MTA — Главная</title>
   <meta name="description" content="XRAGE MTA — игровой сервер MTA:SA." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -28,13 +28,36 @@
       overflow-x:hidden;
     }
 
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(8px);
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:14px 0;
+      z-index:10;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .nav-link{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:16px;
+      transition:color .2s;
+    }
+    .nav-link:hover, .nav-link.active{
+      color:var(--accent);
+    }
+
     .hero{
       min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:center;
       position:relative;
-      padding:40px 24px;
+      padding:80px 24px 40px;
       background-image:url('фото1.jpg');
       background-size:cover;
       background-position:center center;
@@ -69,7 +92,6 @@
     .title{font-size:48px;font-weight:800;margin:6px 0 6px;color:#fff;text-shadow:0 8px 30px rgba(230,59,46,0.12);}
     .subtitle{color:var(--muted);margin:0 0 18px;font-size:16px}
 
-    /* How to play cards */
     .steps{display:flex;gap:14px;justify-content:center;margin:18px 0 22px;flex-wrap:wrap}
     .step{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
       border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:14px;min-width:180px;max-width:260px;
@@ -96,7 +118,6 @@
     .btn-small{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.004));border:1px solid rgba(255,255,255,0.03);padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:700}
     .ip-footer{font-weight:700;color:#fff}
 
-    /* leaves */
     .leaf-wrap{position:absolute;inset:0;pointer-events:none;z-index:2}
     .leaf{position:absolute;width:12px;height:12px;background:var(--accent);opacity:0.12;border-radius:3px;filter:blur(0.4px);transform:rotate(12deg)}
 
@@ -109,9 +130,14 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <a href="index.html" class="nav-link active">Главная</a>
+    <a href="news.html" class="nav-link">Новости</a>
+  </header>
+
   <div class="hero">
     <div class="leaf-wrap" id="leaf-wrap"></div>
-
     <div class="container">
 
       <div class="logo">
@@ -119,86 +145,63 @@
         <div class="name">XRAGE <span style="color:var(--accent)">MTA</span></div>
       </div>
 
-      <div class="panel" role="main" aria-labelledby="main-title">
-        <h1 id="main-title" class="title">🔥 XRAGE MTA</h1>
+      <div class="panel">
+        <h1 class="title">🔥 XRAGE MTA</h1>
         <p class="subtitle">Быстро и просто — скачай лаунчер и погружайся в игровой мир.</p>
 
-        <div class="steps" aria-label="Как начать играть">
-          <div class="step" aria-labelledby="step1">
+        <div class="steps">
+          <div class="step">
             <div class="ico">🚀</div>
-            <div>
-              <h3 id="step1">1) Скачай наш лаунчер</h3>
-              <p>Кликни на кнопку «Скачать игру» и скачай установщик.</p>
-            </div>
+            <div><h3>1) Скачай наш лаунчер</h3><p>Кликни на кнопку «Скачать игру» и скачай установщик.</p></div>
           </div>
-
-          <div class="step" aria-labelledby="step2">
+          <div class="step">
             <div class="ico">⚙️</div>
-            <div>
-              <h3 id="step2">2) Установи</h3>
-              <p>Запусти скачанный файл и следуй подсказкам установщика.</p>
-            </div>
+            <div><h3>2) Установи</h3><p>Запусти установщик и следуй подсказкам.</p></div>
           </div>
-
-          <div class="step" aria-labelledby="step3">
+          <div class="step">
             <div class="ico">🎮</div>
-            <div>
-              <h3 id="step3">3) Начинай играть</h3>
-              <p>Открой лаунчер, нажми «Запустить» и присоединяйся к серверу.</p>
-            </div>
+            <div><h3>3) Начинай играть</h3><p>Открой лаунчер и подключайся к серверу.</p></div>
           </div>
         </div>
 
         <div class="download-wrap">
-          <a class="btn-main" id="download-btn" href="https://vk.com/visionmtaa" target="_blank" rel="noopener">СКАЧАТЬ ИГРУ</a>
+          <a class="btn-main" href="https://vk.com/visionmtaa" target="_blank" rel="noopener">СКАЧАТЬ ИГРУ</a>
         </div>
 
-        <div class="about" aria-labelledby="about-title">
-          <h4 id="about-title">О сервере</h4>
+        <div class="about">
+          <h4>О сервере</h4>
           <p>XRAGE MTA — современный проект с упором на комфорт, ивенты и активное сообщество. Быстрый лаунчер, тюнинг авто, кланы и регулярные события — всё для фанатов MTA:SA.</p>
         </div>
       </div>
 
       <footer>
         <div class="socials">
-          <a class="btn-small" href="https://vk.com/visionmtaa" target="_blank" rel="noopener">VK: visionmtaa</a>
-          <button class="btn-small" id="copy-vk">Копировать ссылку VK</button>
+          <a class="btn-small" href="https://vk.com/visionmtaa" target="_blank">VK: visionmtaa</a>
         </div>
-        <div class="ip-footer" id="ip-footer">IP: 195.18.27.241:22076</div>
+        <div class="ip-footer">IP: 195.18.27.241:22076</div>
       </footer>
 
     </div>
   </div>
 
   <script>
-    // leaf animation generator
     const wrap = document.getElementById('leaf-wrap');
     for(let i=0;i<20;i++){
-      const l = document.createElement('div');
+      const l=document.createElement('div');
       l.className='leaf';
-      const size = 6 + Math.random()*18;
-      l.style.width = size + 'px'; l.style.height = size + 'px';
-      l.style.left = Math.random()*100 + '%'; l.style.top = Math.random()*100 + '%';
-      l.style.opacity = 0.05 + Math.random()*0.2;
-      l.style.transform = 'rotate(' + (Math.random()*60-30) + 'deg)';
-      l.style.animation = 'leafFloat ' + (10+Math.random()*18) + 's linear infinite';
-      l.style.background = 'linear-gradient(180deg, rgba(230,59,46,0.9), rgba(255,90,68,0.8))';
-      l.style.borderRadius = '3px';
+      const s=6+Math.random()*18;
+      l.style.width=s+'px';l.style.height=s+'px';
+      l.style.left=Math.random()*100+'%';l.style.top=Math.random()*100+'%';
+      l.style.opacity=0.05+Math.random()*0.2;
+      l.style.transform='rotate('+(Math.random()*60-30)+'deg)';
+      l.style.animation='leafFloat '+(10+Math.random()*18)+'s linear infinite';
+      l.style.background='linear-gradient(180deg, rgba(230,59,46,0.9), rgba(255,90,68,0.8))';
+      l.style.borderRadius='3px';
       wrap.appendChild(l);
     }
-    const style = document.createElement('style');
-    style.innerHTML = `@keyframes leafFloat{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-40vh) rotate(60deg)}100%{transform:translateY(0) rotate(0deg)}}`;
+    const style=document.createElement('style');
+    style.innerHTML='@keyframes leafFloat{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-40vh) rotate(60deg)}100%{transform:translateY(0) rotate(0deg)}}';
     document.head.appendChild(style);
-
-    // copy vk link
-    function copyToClipboard(text){
-      if(navigator.clipboard){ navigator.clipboard.writeText(text).then(()=>{ alert('Скопировано: ' + text) }) }
-      else{ const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); alert('Скопировано: ' + text) }
-    }
-    document.getElementById('copy-vk').addEventListener('click', ()=> copyToClipboard('https://vk.com/visionmtaa'));
-
-    // small a11y: focus on download on Enter from steps
-    document.querySelectorAll('.step').forEach(s=> s.addEventListener('click', ()=> document.getElementById('download-btn').focus()));
   </script>
 </body>
 </html>

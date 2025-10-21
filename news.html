@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XRAGE MTA — Новости</title>
+  <meta name="description" content="Новости проекта XRAGE MTA." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0506;
+      --accent:#e63b2e;
+      --accent-2:#ff5a44;
+      --muted:#a39aa0;
+      --glass: rgba(255,255,255,0.03);
+      --card: rgba(255,255,255,0.02);
+      --glow: 0 8px 30px rgba(230,59,46,0.12);
+    }
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#f6f5f6;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(8px);
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:14px 0;
+      z-index:10;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .nav-link{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:16px;
+      transition:color .2s;
+    }
+    .nav-link:hover, .nav-link.active{
+      color:var(--accent);
+    }
+
+    .container{width:1100px;max-width:100%;margin:120px auto;padding:0 20px;}
+    .news-title{font-size:36px;font-weight:800;text-align:center;margin-bottom:30px;}
+    .news-card{display:flex;flex-wrap:wrap;gap:20px;background:var(--glass);border-radius:14px;padding:24px;box-shadow:var(--glow);}
+    .news-img{flex:0 0 280px;width:280px;border-radius:12px;object-fit:cover;}
+    .news-content{flex:1;min-width:260px;}
+    .news-heading{font-size:22px;font-weight:800;color:var(--accent);margin-top:0;}
+    .news-content p{color:var(--muted);font-size:15px;line-height:1.6;margin:0 0 10px;}
+    footer{margin-top:40px;padding:20px 12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    .btn-small{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.004));border:1px solid rgba(255,255,255,0.03);padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:700}
+    .ip-footer{font-weight:700;color:#fff}
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="news.html" class="nav-link active">Новости</a>
+  </header>
+
+  <div class="container">
+    <h1 class="news-title">📰 Новости проекта XRAGE MTA</h1>
+
+    <div class="news-card">
+      <img src="news.png" alt="Новый сайт и лаунчер XRAGE MTA" class="news-img">
+      <div class="news-content">
+        <h3 class="news-heading">Представляем Вам новый сайт и лаунчер!</h3>
+        <p>XRAGE MTA представляет Вам свой новый сайт и лаунчер.</p>
+        <p>Теперь у вас есть уникальная возможность быстрого и удобного доступа к миру наших приключений. Новый лаунчер спроектирован с учетом всех ваших пожеланий, и он просто идеален! Благодаря этому интуитивно понятному приложению, вы сможете легко управлять вашим игровым опытом, настраивать различные параметры и следить за обновлениями.</p>
+        <p>И это далеко не всё! Наш лаунчер предоставляет возможность быстрой установки игры, обновлений и дополнений, чтобы вы всегда оставались в курсе последних новостей и имели доступ к самым захватывающим игровым возможностям.</p>
+        <p>Не упустите шанс погрузиться в игровой мир с новым лаунчером! Подключайтесь, наслаждайтесь, и создавайте легенды вместе с нами. Это только начало – ожидайте ещё больше впечатлений и обновлений.</p>
+        <p><strong>Спасибо, что вы с нами!</strong><br>Команда XRAGE MTA.</p>
+      </div>
+    </div>
+
+    <footer>
+      <a class="btn-small" href="https://vk.com/visionmtaa" target="_blank">VK: visionmtaa</a>
+      <div class="ip-footer">IP: 195.18.27.241:22076</div>
+    </footer>
+  </div>
+
+</body>
+</html>
