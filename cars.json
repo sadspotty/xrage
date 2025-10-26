@@ -1,8 +1,9 @@
 [
-  { "name": "Lada Priora", "price": 29000, "speed": 230, "image": "cars/547.png" },
-  { "name": "Auto1", "price": 150000, "speed": 290, "image": "cars/def.png" },
-  { "name": "Lada Priora", "price": 29000, "speed": 230, "image": "cars/547.png" },
-  { "name": "Lada Priora", "price": 29000, "speed": 230, "image": "cars/547.png" },
+  { "name": "ВАЗ 2106", "price": 13000, "speed": 150, "image": "cars/551.png" },
+  { "name": "Газ Волга", "price": 16000, "speed": 290, "image": "cars/475.png" },
+  { "name": "ВАЗ 2107", "price": 18000, "speed": 170, "image": "cars/404.png" },
+  { "name": "ВАЗ 21099", "price": 21000, "speed": 180, "image": "cars/421.png" },
+  { "name": "ВАЗ 2114", "price": 23000, "speed": 190, "image": "cars/518.png" },
   { "name": "Lada Priora", "price": 29000, "speed": 230, "image": "cars/547.png" },
   { "name": "Auto2", "price": 85000, "speed": 250, "image": "cars/def.png" }
 ]
