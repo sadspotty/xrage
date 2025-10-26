@@ -1,5 +1,5 @@
 [
-  { "name": "Auto", "price": 55000, "speed": 210, "image": "cars/def.png" },
+  { "name": "Lada Priora", "price": 55000, "speed": 210, "image": "cars/547.png" },
   { "name": "Auto1", "price": 150000, "speed": 290, "image": "cars/def.png" },
   { "name": "Auto2", "price": 85000, "speed": 250, "image": "cars/def.png" }
 ]
